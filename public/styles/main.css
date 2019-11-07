@@ -1,0 +1,36 @@
+main {
+  margin-top: 50px;
+}
+
+form {
+  margin: 0 auto;
+}
+
+textarea {
+  border: none;
+  border-bottom: 5px solid #545149;
+  width: 100%;
+  padding-bottom: 15px;
+  margin: 15px auto;
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.new-tweet form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.new-tweet form input {
+  background-color: #4056A1;
+  color: white;
+}
+
+.new-tweet form span {
+  color: #545149;
+}
+
+.new-tweet form input, .new-tweet form span {
+  padding: 5px 10px;
+  font-family: "Bungee", sans-serif;
+}
