@@ -42,4 +42,9 @@ $(document).ready(function() {
   }
 
   renderTweets(tweetData);
+
+  $("#form-tweet-id").submit(function(e) {
+    e.preventDefault();
+    alert("submit stopped.")
+  })
 });
