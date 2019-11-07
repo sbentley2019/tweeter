@@ -38,6 +38,12 @@ $(document).ready(function() {
     })
   }();
 
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const isTweetValidated = function(tweet) {
     if (tweet.value === "" || tweet.value === undefined) {
       alert('Tweet has to have at least one character.');
@@ -56,12 +62,19 @@ $(document).ready(function() {
 
   $("#form-tweet-id").submit(function(e) {
     e.preventDefault();
+    $(this)[0][0].value = escape($(this)[0][0].value);
     if (isTweetValidated($(this)[0][0])) {
       $.ajax({
         url: '/tweets',
         type: 'POST',
         data: $(this).serialize()
+      }).then(() => {
+        $.ajax("/tweets", { method: 'GET'})
+        .then(function(tweetPost) {
+          renderTweets([tweetPost[tweetPost.length - 1]]);
+        })
       })
+      $('form textarea').val('');
     }
   })
 });
