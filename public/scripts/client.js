@@ -38,12 +38,30 @@ $(document).ready(function() {
     })
   }();
 
+  const isTweetValidated = function(tweet) {
+    if (tweet.value === "" || tweet.value === undefined) {
+      alert('Tweet has to have at least one character.');
+      return false;
+    } 
+    if (tweet.value === null) {
+      alert('Tweet cannot be null.');
+      return false;
+    }
+    if (tweet.value.length > 140) {
+      alert('The number of characters cannot exceed 140.');
+      return false;
+    }
+    return true;
+  }
+
   $("#form-tweet-id").submit(function(e) {
     e.preventDefault();
-    $.ajax({
-      url: '/tweets',
-      type: 'POST',
-      data: $(this).serialize()
-    })
+    if (isTweetValidated($(this)[0][0])) {
+      $.ajax({
+        url: '/tweets',
+        type: 'POST',
+        data: $(this).serialize()
+      })
+    }
   })
 });
