@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
   const renderTweets = function(tweets) {
-    const $tweet = createTweetElement(tweets);
-    $('#tweets-container').append($tweet);
+    console.log(tweets);
+      tweets.forEach(function(element) {
+        const $tweet = createTweetElement(element);
+        $('#tweets-container').append($tweet);
+      });
   }
   
   const createTweetElement = function(tweetObj) {
@@ -28,23 +31,19 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  }
-
-  renderTweets(tweetData);
+  const loadTweets = function() {
+    $.ajax("/tweets", { method: 'GET' })
+    .then(function(tweetPost) {
+      renderTweets(tweetPost);
+    })
+  }();
 
   $("#form-tweet-id").submit(function(e) {
     e.preventDefault();
-    alert("submit stopped.")
+    $.ajax({
+      url: '/tweets',
+      type: 'POST',
+      data: $(this).serialize()
+    })
   })
 });
