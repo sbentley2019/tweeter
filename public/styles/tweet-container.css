@@ -14,8 +14,12 @@ article.tweet:hover {
   box-shadow: 5px 5px #c4cae2;
 }
 article.tweet:hover div + h3 {
-  display: block;
+  display: inline-block;
   color: #c4cae2;
+  padding: 10px 15px
+}
+article.tweet:hover footer i {
+  display: inline-block;
 }
 article.tweet header {
   padding: 5px 10px 15px;
@@ -37,6 +41,7 @@ article.tweet footer {
   padding: 15px 15px 5px;
 }
 article.tweet footer i {
+  display: none;
   color: #4056A1;
 }
 article.tweet header, article.tweet footer {

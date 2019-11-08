@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $('button#compose-tweet-id').on('click', function() {
+    $('#compose-tweet-id').slideUp("slow");
+    $('.new-tweet').slideDown("slow");
+  });
+
   const renderTweets = function(tweets) {
     console.log(tweets);
       tweets.forEach(function(element) {

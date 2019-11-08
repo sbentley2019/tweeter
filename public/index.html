@@ -47,11 +47,11 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <button id="compose-tweet-id">Compose Tweet</button>
       <section class="new-tweet">
         <p id="error-message-id"><i class="fas fa-exclamation-triangle"></i><span>Error Message</span><i  class="fas fa-exclamation-triangle"></i></p>
-        <h2>Compose Tweet</h2>
         <form id="form-tweet-id" action="/tweets/" method="POST" Content-Type="application/x-www-form-urlencoded">
-          <textarea name="text"placeholder="What are you hummingabout?" rows="1"></textarea>
+          <textarea name="text"placeholder="What are you humming about?" rows="1"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
