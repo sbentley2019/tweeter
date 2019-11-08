@@ -28,10 +28,6 @@ article.tweet header div {
   display: flex;
   flex-direction: row;
 }
-article.tweet header {
-  display: flex;
-  justify-content: space-between;
-}
 article.tweet .message {
   margin: 20px 0 30px;
   font-size: 1.1em;
@@ -43,7 +39,7 @@ article.tweet footer {
 article.tweet footer i {
   color: #4056A1;
 }
-article.tweet footer header, article.tweet footer footer {
+article.tweet header, article.tweet footer {
   display: flex;
   justify-content: space-between;
 }

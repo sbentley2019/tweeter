@@ -8,7 +8,17 @@ $(document).ready(function() {
       });
   }
   
+  const timePosted = function(time) {
+    //returns an array of number and string ex.[10, minutes]
+    if (time / 1000 < 60) return [Math.floor(time / 1000), "seconds"];
+    else if (time / ( 1000 * 60 ) < 60) return [Math.floor(time / ( 1000 * 60 )), "minutes"];
+    else if (time / ( 1000 * 60 * 60 ) < 24) return [Math.floor(time / ( 1000 * 60 * 60 )), "hours"]
+    else return [Math.floor(time / (1000 * 60 * 60 * 24)), 'days'];
+  }
+
   const createTweetElement = function(tweetObj) {
+    const time = timePosted(new Date().getTime() - new Date(tweetObj.created_at).getTime());
+
     const $tweet = 
     `<article class="tweet">
       <header>
@@ -20,7 +30,7 @@ $(document).ready(function() {
       </header>
       <p class="message">${tweetObj.content.text}</p>
       <footer>
-        <span>Posted ${tweetObj.created_at} ms ago</span>
+        <span>Posted ${time[0]} ${time[1]} ago</span>
         <div>
           <a href="#"><i class="fas fa-flag"></i></a>
           <a href="#"><i class="fas fa-retweet"></i></a>

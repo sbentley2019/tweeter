@@ -7,8 +7,19 @@ nav {
   padding: 1.5em;
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav span {
   font-family: 'Bungee', sans-serif;
+}
+nav div {
+  text-align: center;
+}
+nav i {
+  color: orange;
+}
+nav i:hover {
+  cursor: pointer;
 }
