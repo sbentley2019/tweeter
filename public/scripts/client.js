@@ -94,6 +94,7 @@ $(document).ready(function() {
           })
         })
         $('form textarea').val('');
+        $('.counter').text('140');
       }
   })
 });
