@@ -30,3 +30,24 @@ main {
   margin: 0 auto;
   background-color: #f4f1ec;
 }
+
+@media only screen and (min-width: 1000px) {
+  
+  .flex-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+  }  
+
+  .flex-container header.profile {
+    width: 30%;
+    margin-left: 50px;
+  }
+
+  .flex-container .container {
+    width: 50%;
+    margin-right: 50px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
