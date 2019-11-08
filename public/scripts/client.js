@@ -56,15 +56,18 @@ $(document).ready(function() {
 
   const isTweetValidated = function(tweet) {
     if (tweet.value === "" || tweet.value === undefined) {
-      alert('Tweet has to have at least one character.');
+      $('#error-message-id span').text(' Tweet has to have at least one character. ');
+      $('#error-message-id').slideDown("slow");
       return false;
     } 
     if (tweet.value === null) {
-      alert('Tweet cannot be null.');
+    $('#error-message-id span').text('Tweet cannot be null.');
+    $('#error-message-id').slideDown("slow");
       return false;
     }
     if (tweet.value.length > 140) {
-      alert('The number of characters cannot exceed 140.');
+      $('#error-message-id span').text("The number of characters cannot exceed 140.");
+      $('#error-message-id').slideDown("slow");
       return false;
     }
     return true;
@@ -72,19 +75,20 @@ $(document).ready(function() {
 
   $("#form-tweet-id").submit(function(e) {
     e.preventDefault();
+    $('#error-message-id').slideUp("slow");
     $(this)[0][0].value = escape($(this)[0][0].value);
-    if (isTweetValidated($(this)[0][0])) {
-      $.ajax({
-        url: '/tweets',
-        type: 'POST',
-        data: $(this).serialize()
-      }).then(() => {
-        $.ajax("/tweets", { method: 'GET'})
-        .then(function(tweetPost) {
-          renderTweets([tweetPost[tweetPost.length - 1]]);
+      if (isTweetValidated($(this)[0][0])) {
+        $.ajax({
+          url: '/tweets',
+          type: 'POST',
+          data: $(this).serialize()
+        }).then(() => {
+          $.ajax("/tweets", { method: 'GET'})
+          .then(function(tweetPost) {
+            renderTweets([tweetPost[tweetPost.length - 1]]);
+          })
         })
-      })
-      $('form textarea').val('');
-    }
+        $('form textarea').val('');
+      }
   })
 });
