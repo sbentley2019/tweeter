@@ -22,7 +22,7 @@ $(document).ready(function() {
   }
 
   const createTweetElement = function(tweetObj) {
-    const time = timePosted(new Date().getTime() - new Date(tweetObj.created_at).getTime());
+    const time = timePosted(new Date().getTime() - new Date(tweetObj.createdAt).getTime());
 
     const $tweet = 
     `<article class="tweet">
