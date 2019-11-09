@@ -2,31 +2,26 @@
 <html lang="en">
   <head>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-    <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet"> 
 
-    <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/new-tweet.css">
     <link rel="stylesheet" href="/styles/tweet-container.css">
 
-    <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
 
-    <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/navbar-scroll.js"></script>
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
       <div>
@@ -34,32 +29,35 @@
         <i id="scroll-down-id" class="fas fa-angle-double-down"></i>
       </div>
     </nav>
+
     <div class="flex-container">
-    <header class="profile">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
+      <header class="profile">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <button id="compose-tweet-id">Compose Tweet</button>
-      <section class="new-tweet">
-        <p id="error-message-id"><i class="fas fa-exclamation-triangle"></i><span>Error Message</span><i  class="fas fa-exclamation-triangle"></i></p>
-        <form id="form-tweet-id" action="/tweets/" method="POST" Content-Type="application/x-www-form-urlencoded">
-          <textarea name="text"placeholder="What are you humming about?" rows="1"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
-      <section id="tweets-container">
-      </section>
+        <div>
+          <h2>Stewart Bentley</h2>
+        </div>
+      </header>
 
-    </main>
-  </div>
+      <main class="container">
+        <button id="compose-tweet-id">Compose Tweet</button>
+
+        <section class="new-tweet">
+          <p id="error-message-id"><i class="fas fa-exclamation-triangle"></i><span>Error Message</span><i    class="fas fa-exclamation-triangle"></i></p>
+          <form id="form-tweet-id" action="/tweets/" method="POST" Content-Type="application/x-www-form-urlencoded">
+            <textarea name="text"placeholder="What are you humming about?" rows="1"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+
+        <section id="tweets-container">
+        </section>
+
+      </main>
+    </div>
   </body>
 </html>

@@ -14,12 +14,15 @@ nav {
 nav span {
   font-family: 'Bungee', sans-serif;
 }
+
 nav div {
   text-align: center;
 }
+
 nav i {
   color: orange;
 }
+
 nav i:hover {
   cursor: pointer;
 }

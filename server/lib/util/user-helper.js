@@ -1,7 +1,7 @@
 "use strict";
 
 const Chance      = require("chance"),
-      chance      = new Chance();
+  chance      = new Chance();
 
 const md5 = require('md5');
 

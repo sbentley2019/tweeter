@@ -1,50 +1,62 @@
-article.tweet {
+.tweet {
   border: 5px solid #545149;
   padding: 15px;
   margin-top: 75px;
 }
-article.tweet p {
+
+.tweet header {
+  padding: 5px 10px 15px;
+}
+
+.tweet header div {
+  display: flex;
+  flex-direction: row;
+}
+
+.tweet p {
   padding: 0 15px;
 }
-article.tweet div + h3 {
+
+.tweet div + h3 {
   display: none;
 }
-article.tweet:hover {
+
+.tweet header p {
+  font-size: 1.4em;
+  padding: 10px 15px;
+}
+
+.tweet .message {
+  margin: 20px 0 30px;
+  font-size: 1.1em;
+}
+
+.tweet footer {
+  border-top: 5px solid #545149;
+  padding: 15px 15px 5px;
+}
+
+.tweet footer i {
+  display: none;
+  color: #4056A1;
+}
+
+.tweet header, .tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet:hover {
   text-shadow: 1px 1px 1px #c4cae2;
   box-shadow: 5px 5px #c4cae2;
 }
-article.tweet:hover div + h3 {
+
+.tweet:hover div + h3 {
   display: inline-block;
   color: #c4cae2;
   padding: 10px 15px
 }
-article.tweet:hover footer i {
+
+.tweet:hover footer i {
   display: inline-block;
-}
-article.tweet header {
-  padding: 5px 10px 15px;
-}
-article.tweet header p {
-  font-size: 1.4em;
-  padding: 10px 15px;
-}
-article.tweet header div {
-  display: flex;
-  flex-direction: row;
-}
-article.tweet .message {
-  margin: 20px 0 30px;
-  font-size: 1.1em;
-}
-article.tweet footer {
-  border-top: 5px solid #545149;
-  padding: 15px 15px 5px;
-}
-article.tweet footer i {
-  display: none;
-  color: #4056A1;
-}
-article.tweet header, article.tweet footer {
-  display: flex;
-  justify-content: space-between;
 }

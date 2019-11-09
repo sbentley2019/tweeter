@@ -2,12 +2,11 @@
   display: none;
 }
 
-main {
-  margin-top: 50px;
-}
-
-form {
+.new-tweet form {
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 textarea {
@@ -20,21 +19,16 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.new-tweet form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.new-tweet form input, button {
+form input, button {
   background-color: #4056A1;
   color: white;
 }
 
-.new-tweet form span {
+form span {
   color: #545149;
 }
 
-.new-tweet form input, .new-tweet form span, button {
+form input, form span, button {
   padding: 5px 10px;
   font-family: "Bungee", sans-serif;
 }
