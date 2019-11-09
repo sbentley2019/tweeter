@@ -17,7 +17,7 @@ $(document).ready(function() {
       return [Math.floor(time / 1000), 'seconds'];
     } else if (time / (1000 * 60) < 60) {
       return [Math.floor(time / (1000 * 60)), 'minutes'];
-    } else if (time / (1000 * 60 * 60) < 24) { 
+    } else if (time / (1000 * 60 * 60) < 24) {
       return [Math.floor(time / (1000 * 60 * 60)), 'hours'];
     } else {
       return [Math.floor(time / (1000 * 60 * 60 * 24)), 'days'];
@@ -25,7 +25,7 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(tweetObj) {
-    const time = timePosted(new Date().getTime() - new Date(tweetObj.created_at).getTime()); 
+    const time = timePosted(new Date().getTime() - new Date(tweetObj.created_at).getTime());
       
     const $tweet =
     `<article class='tweet'>

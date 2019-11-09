@@ -8,7 +8,7 @@ $(document).ready(function() {
     } else {
       $("html").animate({
         scrollTop: 0 }, 2000);
-        $("textarea").focus();
+      $("textarea").focus();
     }
     scrollCount++;
   });
