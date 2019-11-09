@@ -1,14 +1,14 @@
 {
   "name": "tweeter",
   "version": "1.0.0",
-  "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
+  "description": "A simple single-page AJAX-based Twitter clone that uses jQuery, HTML5 and CSS3.  It was created by Stewart Bentley at a Lighthouse Labs web dev bootcamp to learn the previously mentioned front-end dev skills.",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
-  "author": "Lighthouse Labs",
+  "author": "Stewart Bentley, sbentley000@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
