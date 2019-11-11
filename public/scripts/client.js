@@ -1,14 +1,19 @@
 $(document).ready(function() {
 
+
   $('button#compose-tweet-id').on('click', function() {
-    $('#compose-tweet-id').slideUp('slow');
-    $('.new-tweet').slideDown('slow');
+    // Toggles the tweet box visibility
+    if ($('.new-tweet').css('display') === 'none') {
+      $('.new-tweet').slideDown('slow');
+    } else {
+      $('.new-tweet').slideUp('slow');
+    }
   });
 
   const renderTweets = function(tweets) {
     tweets.forEach(function(element) {
       const $tweet = createTweetElement(element);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     });
   };
   
@@ -87,7 +92,6 @@ $(document).ready(function() {
     $('#error-message-id').slideUp('slow');
     $(this)[0][0].value = escape($(this)[0][0].value);
     if (isTweetValidated($(this)[0][0])) {
-      console.log($(this));
       $.ajax({
         url: '/tweets',
         type: 'POST',

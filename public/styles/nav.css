@@ -16,7 +16,9 @@ nav span {
 }
 
 nav div {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav i {
@@ -24,5 +26,13 @@ nav i {
 }
 
 nav i:hover {
+  cursor: pointer;
+}
+
+nav button {
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFF;
+  border: none;
   cursor: pointer;
 }

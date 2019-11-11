@@ -1,5 +1,6 @@
 .new-tweet {
   display: none;
+  margin-bottom: 75px;
 }
 
 .new-tweet form {
@@ -19,7 +20,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-form input, button {
+form input, form button {
   background-color: #4056A1;
   color: white;
 }
@@ -28,7 +29,7 @@ form span {
   color: #545149;
 }
 
-form input, form span, button {
+form input, form span, form button {
   padding: 5px 10px;
   font-family: "Bungee", sans-serif;
 }
