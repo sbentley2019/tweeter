@@ -4,15 +4,15 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, JS, 
 
 ## Final Product
 
-!["Screenshot of tweeter page"](#)
+!["Screenshot of tweeter page"](https://github.com/sbentley2019/tweeter/blob/master/public/docs/tweeter-page.png?raw=true)
 
-!["Screenshot of tweeter page tweet box"](#)
+!["Screenshot of tweeter page tweet box"](https://github.com/sbentley2019/tweeter/blob/master/public/docs/tweeter-tweetbox.png?raw=true)
 
-!["Screenshot of tweeter page responsive view"](#)
+!["Screenshot of tweeter page responsive view"](https://github.com/sbentley2019/tweeter/blob/master/public/docs/tweeter-responsive-page.png?raw=true)
 
-!["Screenshot of tweeter page tweet box responsive view"](#)
+!["Screenshot of tweeter page tweet box responsive view"](https://github.com/sbentley2019/tweeter/blob/master/public/docs/tweeter-responsive-tweetbox.png?raw=true)
 
-!["Screenshot of adding tweet to top"](#)
+!["Screenshot of adding tweet to top"](https://github.com/sbentley2019/tweeter/blob/master/public/docs/tweeter-adding-tweet.png?raw=true)
 
 ## Getting Started
 
