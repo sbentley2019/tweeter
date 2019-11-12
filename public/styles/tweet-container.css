@@ -26,6 +26,10 @@
   padding: 10px 15px;
 }
 
+.tweet header + p {
+  word-wrap: break-word;
+}
+
 .tweet .message {
   margin: 20px 0 30px;
   font-size: 1.1em;
