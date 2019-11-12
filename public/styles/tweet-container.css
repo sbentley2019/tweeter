@@ -54,7 +54,7 @@
 .tweet:hover div + h3 {
   display: inline-block;
   color: #c4cae2;
-  padding: 10px 15px
+  padding: 10px 15px;
 }
 
 .tweet:hover footer i {

@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
 
-  $('button#compose-tweet-id').on('click', function() {
+  $('button#compose-tweet').on('click', function() {
     // Toggles the tweet box visibility
     if ($('.new-tweet').css('display') === 'none') {
       $('.new-tweet').slideDown('slow');
+      $("textarea").focus();
     } else {
       $('.new-tweet').slideUp('slow');
     }
@@ -69,27 +70,23 @@ $(document).ready(function() {
   };
 
   const isTweetValidated = function(tweet) {
-    if (tweet.value === '' || tweet.value === undefined) {
-      $('#error-message-id span').text(' Tweet has to have at least one character. ');
-      $('#error-message-id').slideDown('slow');
-      return false;
-    }
-    if (tweet.value === null) {
-      $('#error-message-id span').text('Tweet cannot be null.');
-      $('#error-message-id').slideDown('slow');
+    if (!tweet.value) {
+      $('#error-message span').text(' Tweet has to have at least one character. ');
+      $('#error-message').slideDown('slow');
       return false;
     }
     if (tweet.value.length > 140) {
-      $('#error-message-id span').text('The number of characters cannot exceed 140.');
-      $('#error-message-id').slideDown('slow');
+      $('#error-message span').text('The number of characters cannot exceed 140.');
+      $('#error-message').slideDown('slow');
       return false;
+    } else {
+      return true;
     }
-    return true;
   };
 
-  $('#form-tweet-id').submit(function(e) {
+  $('#form-tweet').submit(function(e) {
     e.preventDefault();
-    $('#error-message-id').slideUp('slow');
+    $('#error-message').slideUp('slow');
     $(this)[0][0].value = escape($(this)[0][0].value);
     if (isTweetValidated($(this)[0][0])) {
       $.ajax({
