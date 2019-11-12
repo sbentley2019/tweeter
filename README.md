@@ -6,13 +6,13 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, JS, 
 
 !["Screenshot of tweeter page"](#)
 
+!["Screenshot of tweeter page tweet box"](#)
+
 !["Screenshot of tweeter page responsive view"](#)
 
-!["Screenshot of tweeter page text area"](#)
+!["Screenshot of tweeter page tweet box responsive view"](#)
 
-!["Screenshot of counter change connects to tweet text"](#)
-
-!["Screenshot of adding tweet to bottom"](#)
+!["Screenshot of adding tweet to top"](#)
 
 ## Getting Started
 
