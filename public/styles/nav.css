@@ -4,7 +4,7 @@ nav {
   z-index: 1;
   background-color: #4056A1;
   color: #FFF;
-  padding: 1.5em;
+  padding: 1.4em;
   position: sticky;
   top: 0;
   display: flex;
@@ -25,12 +25,12 @@ nav i {
   color: orange;
 }
 
-nav i:hover {
-  cursor: pointer;
+nav p {
+  width: 100%;
 }
 
 nav button {
-  width: 100%;
+  width: 25%;
   background-color: #4056A1;
   color: #FFF;
   border: none;

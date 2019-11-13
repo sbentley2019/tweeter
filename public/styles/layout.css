@@ -25,7 +25,10 @@ main {
 }
 
 @media only screen and (min-width: 1000px) {
-  
+  nav span {
+    margin-left: 15px;
+  }
+
   .flex-container {
     margin-top: 100px;
     display: flex;

@@ -48,9 +48,9 @@ $(document).ready(function() {
       <footer>
         <span>Posted ${time.join(' ')} ago</span>
         <div>
-          <a href='#' title='flag'><i class='fas fa-flag'></i></a>
-          <a href='#' title='retweet'><i class='fas fa-retweet'></i></a>
-          <a href='#' title='like'><i class='fas fa-heart'></i></a>
+          <i title='flag' class='fas fa-flag'></i>
+          <i title='retweet' class='fas fa-retweet'></i>
+          <i title='like' class='fas fa-heart'></i>
         </div>
       </footer>
     </article>`;
